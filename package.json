@@ -1,0 +1,25 @@
+{
+  "name": "pgqueue",
+  "version": "0.0.0",
+  "description": "A PostgreSQL-backed job queue for Node.js, written in TypeScript",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "engines": { "node": ">=24" },
+  "packageManager": "pnpm@10.22.0",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.11",
+    "typescript": "^7.0.2"
+  }
+}
